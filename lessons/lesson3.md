@@ -35,7 +35,11 @@ kkl 加上key 查看过期时间
 ## jest 单元测试
 - *.test.js文件
 - 常用的断言
+- "test": "cross-env NODE_ENV=test jest --runInBand --forceExit --colors"
+- runInBand参数是一个一个运行
   
+## pre-commit 代码提交之前进行eslint检查 如果有eslint检查 就不让commit
+
 
 
 
