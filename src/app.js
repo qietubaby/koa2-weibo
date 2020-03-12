@@ -13,8 +13,8 @@ const {
 const session = require('koa-generic-session')
 const redisStore = require('koa-redis')
 
-const index = require('./routes/index')
-const users = require('./routes/users')
+const index = require('./routes/view/index')
+const users = require('./routes/view/users')
 
 // error handler
 onerror(app)
@@ -66,4 +66,4 @@ app.on('error', (err, ctx) => {
     console.error('server error', err, ctx)
 })
 
-module.exports = app;
+module.exports = app

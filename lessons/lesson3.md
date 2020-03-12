@@ -41,5 +41,6 @@ kkl 加上key 查看过期时间
 ## pre-commit 代码提交之前进行eslint检查 如果有eslint检查 就不让commit
 
 
-
+## 调试 加--inspect=9229
+- "dev": "cross-env NODE_ENV=dev ./node_modules/.bin/nodemon --inspect=9229 bin/www"
 
