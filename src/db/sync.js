@@ -5,7 +5,7 @@
 
 const seq = require('./seq')
 
-// require('./model')
+require('./model')
 
 //测试连接
 seq.authenticate().then(() => {
@@ -15,7 +15,7 @@ seq.authenticate().then(() => {
 })
 
 // 执行同步  force:true的意思是 如果数据库中已经存在模型的表了，无条件删除
-seq.sync({ force: false }).then(() => {
+seq.sync({ force: true }).then(() => {
     console.log('sync ok')
     process.exit()
 })
