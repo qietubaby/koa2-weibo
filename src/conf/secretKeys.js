@@ -1,6 +1,5 @@
 /**
  * @description 密钥常量
- * @author 双越老师
  */
 
 module.exports = {
