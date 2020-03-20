@@ -24,8 +24,9 @@ const userViewRouter = require('./routes/view/user')
 const userAPIRouter = require('./routes/api/user')
 const errorViewRouter = require('./routes/view/error')
 const utilsAPIRouter = require('./routes/api/utils') // 上传图片
-
-
+const blogViewRouter = require('./routes/view/blog') // 首页
+const homeAPIRouter = require('./routes/api/blog-home')// 创建微博
+const profileAPIRouter = require('./routes/api/blog-profile') // 加载更多
 
 
 
@@ -77,6 +78,9 @@ app.use(index.routes(), index.allowedMethods())
 app.use(userAPIRouter.routes(), userAPIRouter.allowedMethods())
 app.use(userViewRouter.routes(), userViewRouter.allowedMethods())
 app.use(utilsAPIRouter.routes(), errorViewRouter.allowedMethods())
+app.use(blogViewRouter.routes(), blogViewRouter.allowedMethods())
+app.use(homeAPIRouter.routes(), homeAPIRouter.allowedMethods())
+app.use(profileAPIRouter.routes(), profileAPIRouter.allowedMethods())
 app.use(errorViewRouter.routes(), errorViewRouter.allowedMethods()) // 404
 
 
