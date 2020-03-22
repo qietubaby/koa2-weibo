@@ -5,6 +5,7 @@
 
 const User = require('./User')
 const Blog = require('./Blog')
+const UserRelation = require('./UserRelation')
 
 // 这个是在查询发微博的时候顺带查询用户来
 Blog.belongsTo(User, {
@@ -15,8 +16,17 @@ Blog.belongsTo(User, {
 User.hasMany(Blog)
 
 
+UserRelation.belongsTo(User, {
+    foreignKey: 'followerId'
+})
+User.hasMany(UserRelation, {
+    foreignKey: 'userId'
+})
+
+
 
 module.exports = {
     User,
-    Blog
+    Blog,
+    UserRelation
 }
