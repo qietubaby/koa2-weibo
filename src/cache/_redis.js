@@ -3,7 +3,7 @@
  * @author qietubaby
 */
 
-const reids = require('redis')
+const redis = require('redis')
 
 const { REDIS_CONF } = require('../conf/db')
 
@@ -59,5 +59,5 @@ function get(key) {
 
 
 module.exports = {
-    set
+    set,get
 }
